@@ -1,27 +1,27 @@
-import ChatCam from './ChatCam'
+import ChatMessage from '../../components/ChatMessage'
 
 export const Chat = () => {
   return (
     <aside className='h-full bg-400 p-2 w-3/12 hidden justify-between flex-col md:flex rounded-lg'>
       <section className='h-full max-h-[90%] overflow-y-auto justify-center items-start scrollbar-hide'>
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
-        <ChatCam />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
+        <ChatMessage />
       </section>
 
       <form className='my-2'>

@@ -1,6 +1,6 @@
 import Button from "@/components/Button";
-import Container from "@/components/Container";
-import Header from "@/components/Header";
+import Container from "@/app/_components/Container";
+import Header from "@/app/_components/Header";
 import { Input } from "@/components/Input";
 import Link from "next/link";
 
