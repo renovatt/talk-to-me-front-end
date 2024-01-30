@@ -1,8 +1,8 @@
-import * as React from "react";
-import type { SVGProps } from "react";
+import * as React from 'react'
+import type { SVGProps } from 'react'
 interface SVGRProps {
-  title?: string;
-  titleId?: string;
+  title?: string
+  titleId?: string
 }
 const SvgLogo = ({
   title,
@@ -36,7 +36,7 @@ const SvgLogo = ({
       y={13}
       maskUnits="userSpaceOnUse"
       style={{
-        maskType: "luminance",
+        maskType: 'luminance',
       }}
     >
       <path
@@ -53,5 +53,5 @@ const SvgLogo = ({
       />
     </g>
   </svg>
-);
-export default SvgLogo;
+)
+export default SvgLogo

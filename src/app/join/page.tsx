@@ -1,20 +1,29 @@
-
-import Button from "@/components/Button";
-import Link from "next/link";
-import Header from "../_components/Header";
-import Container from "../_components/Container";
-import { Input } from "@/components/Input";
+import Button from '@/components/Button'
+import Link from 'next/link'
+import Header from '../_components/Header'
+import Container from '../_components/Container'
+import { Input } from '@/components/Input'
 
 export default function Join() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="flex min-h-screen flex-col">
       <Header />
-      <section className="flex flex-col items-center mx-auto flex-1 justify-center">
+      <section className="mx-auto flex flex-1 flex-col items-center justify-center">
         <Container>
-          <article className="bg-600 max-w-[587px] w-full rounded-md overflow-hidden flex-col h-60 flex justify-between items-center">
-            <section className="w-full flex justify-between items-center">
-              <Link href="/join" className="text-700 text-base bg-600 w-1/2 text-center p-2 cursor-pointer">Ingresso</Link>
-              <Link href="/meeting" className="text-white text-base w-1/2 text-center p-2 bg-800 cursor-pointer">Nova reunião</Link>
+          <article className="flex h-60 w-full max-w-[587px] flex-col items-center justify-between overflow-hidden rounded-md bg-600">
+            <section className="flex w-full items-center justify-between">
+              <Link
+                href="/join"
+                className="w-1/2 cursor-pointer bg-600 p-2 text-center text-base text-700"
+              >
+                Ingresso
+              </Link>
+              <Link
+                href="/meeting"
+                className="w-1/2 cursor-pointer bg-800 p-2 text-center text-base text-white"
+              >
+                Nova reunião
+              </Link>
             </section>
 
             <form className="space-y-4 p-4">
@@ -26,5 +35,5 @@ export default function Join() {
         </Container>
       </section>
     </main>
-  );
+  )
 }

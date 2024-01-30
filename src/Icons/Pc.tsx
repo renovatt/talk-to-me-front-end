@@ -1,8 +1,8 @@
-import * as React from "react";
-import type { SVGProps } from "react";
+import * as React from 'react'
+import type { SVGProps } from 'react'
 interface SVGRProps {
-  title?: string;
-  titleId?: string;
+  title?: string
+  titleId?: string
 }
 const SvgPc = ({
   title,
@@ -27,5 +27,5 @@ const SvgPc = ({
     <rect width={20} height={14} x={2} y={3} rx={2} />
     <path d="M8 21h8M12 17v4" />
   </svg>
-);
-export default SvgPc;
+)
+export default SvgPc

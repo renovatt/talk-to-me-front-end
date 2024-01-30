@@ -1,8 +1,8 @@
-import * as React from "react";
-import type { SVGProps } from "react";
+import * as React from 'react'
+import type { SVGProps } from 'react'
 interface SVGRProps {
-  title?: string;
-  titleId?: string;
+  title?: string
+  titleId?: string
 }
 const SvgCamera = ({
   title,
@@ -21,5 +21,5 @@ const SvgCamera = ({
     {title ? <title id={titleId}>{title}</title> : null}
     <path d="M18 10.48V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-4.48l4 3.98v-11zm-2-.79V18H4V6h12z" />
   </svg>
-);
-export default SvgCamera;
+)
+export default SvgCamera

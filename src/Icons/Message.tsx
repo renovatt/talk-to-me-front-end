@@ -1,8 +1,8 @@
-import * as React from "react";
-import type { SVGProps } from "react";
+import * as React from 'react'
+import type { SVGProps } from 'react'
 interface SVGRProps {
-  title?: string;
-  titleId?: string;
+  title?: string
+  titleId?: string
 }
 const SvgMessage = ({
   title,
@@ -26,5 +26,5 @@ const SvgMessage = ({
     {title ? <title id={titleId}>{title}</title> : null}
     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2zM13 8H7M17 12H7" />
   </svg>
-);
-export default SvgMessage;
+)
+export default SvgMessage

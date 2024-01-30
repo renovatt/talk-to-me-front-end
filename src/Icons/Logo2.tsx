@@ -1,8 +1,8 @@
-import * as React from "react";
-import type { SVGProps } from "react";
+import * as React from 'react'
+import type { SVGProps } from 'react'
 interface SVGRProps {
-  title?: string;
-  titleId?: string;
+  title?: string
+  titleId?: string
 }
 const SvgLogo2 = ({
   title,
@@ -41,5 +41,5 @@ const SvgLogo2 = ({
       />
     </defs>
   </svg>
-);
-export default SvgLogo2;
+)
+export default SvgLogo2
