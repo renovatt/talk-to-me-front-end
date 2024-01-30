@@ -1,27 +1,21 @@
-import Button from "@/components/Button";
+"use client"
 import Container from "@/app/_components/Container";
-import Header from "@/app/_components/Header";
-import { Input } from "@/components/Input";
-import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
+  const router = useRouter()
+  useEffect(() => {
+    setTimeout(() => {
+      router.push('/join')
+    }, 3000)
+  }, [router])
   return (
     <main className="min-h-screen flex flex-col">
-      <Header />
       <section className="flex flex-col items-center mx-auto flex-1 justify-center">
         <Container>
-          <article className="bg-600 max-w-[587px] w-full rounded-md overflow-hidden flex-col h-60 flex justify-between items-center">
-            <section className="w-full flex justify-between items-center">
-              <Link href="/" className="text-700 text-base bg-600 w-1/2 text-center p-2 cursor-pointer">Ingresso</Link>
-              <Link href="/meeting" className="text-white text-base w-1/2 text-center p-2 bg-800 cursor-pointer">Nova reunião</Link>
-            </section>
-
-            <form className="space-y-4 p-4">
-              <Input type="text" placeholder="Seu nome" />
-              <Input type="text" placeholder="ID da reunião" />
-              <Button title="Entrar" />
-            </form>
-          </article>
+          <Image src="/logo.svg" alt="logo" width={120} height={120} className="animate-bounce" />
         </Container>
       </section>
     </main>

@@ -12,7 +12,7 @@ export default function Meeting() {
         <Container>
           <article className="bg-600 max-w-[587px] w-full rounded-md overflow-hidden h-60 flex-col flex justify-start items-center">
             <section className="w-full flex justify-between items-center">
-              <Link href="/" className="text-white text-base w-1/2 text-center p-2 bg-800 cursor-pointer">Ingresso</Link>
+              <Link href="/join" className="text-white text-base w-1/2 text-center p-2 bg-800 cursor-pointer">Ingresso</Link>
               <Link href="/meeting" className="text-700 text-base bg-600 w-1/2 text-center p-2 cursor-pointer">Nova reunião</Link>
             </section>
 
