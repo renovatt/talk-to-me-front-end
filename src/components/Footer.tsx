@@ -23,33 +23,33 @@ export default function Footer() {
             {isMuted ? (
               <MicMuted
                 onClick={() => setIsMuted(!isMuted)}
-                className="h-12 w-16 cursor-pointer rounded-md text-white p-2 bg-500 hover:opacity-90 transition-all" />
+                className="h-10 w-14 cursor-pointer rounded-md text-white p-2 bg-500 hover:opacity-90 transition-all" />
             ) : (
               <Mic
                 onClick={() =>
                   setIsMuted(!isMuted)}
-                className="h-12 w-16 cursor-pointer rounded-md text-white p-2 bg-950 hover:opacity-90 transition-all" />
+                className="h-10 w-14 cursor-pointer rounded-md text-white p-2 bg-950 hover:opacity-90 transition-all" />
             )}
 
             {isCameraOff ? (
               <CameraMuted
                 onClick={() => setIsCameraOff(!isCameraOff)}
-                className="h-12 w-16 cursor-pointer rounded-md text-white p-2 bg-500 hover:opacity-90 transition-all" />) : (
+                className="h-10 w-14 cursor-pointer rounded-md text-white p-2 bg-500 hover:opacity-90 transition-all" />) : (
               <Camera
                 onClick={() => setIsCameraOff(!isCameraOff)}
-                className="h-12 w-16 cursor-pointer rounded-md text-white p-2 bg-950 hover:opacity-90 transition-all" />
+                className="h-10 w-14 cursor-pointer rounded-md text-white p-2 bg-950 hover:opacity-90 transition-all" />
             )}
 
             {isScreenSharing ? (
               <PcMuted
                 onClick={() => setScreenSharing(!isScreenSharing)}
-                className="h-12 w-16 cursor-pointer rounded-md text-white p-2 bg-500 hover:opacity-90 transition-all" />) : (
+                className="h-10 w-14 cursor-pointer rounded-md text-white p-2 bg-500 hover:opacity-90 transition-all" />) : (
               <Pc
                 onClick={() => setScreenSharing(!isScreenSharing)}
-                className="h-12 w-16 cursor-pointer rounded-md text-white p-2 bg-950 hover:opacity-90 transition-all" />
+                className="h-10 w-14 cursor-pointer rounded-md text-white p-2 bg-950 hover:opacity-90 transition-all" />
             )}
 
-            <Phone className="h-12 w-16 cursor-pointer hover:bg-red-500 rounded-md text-white p-2 bg-700 transition-all" />
+            <Phone className="h-10 w-14 cursor-pointer hover:bg-red-500 rounded-md text-white p-2 bg-700 transition-all" />
           </section>
         </article>
       </Container>
