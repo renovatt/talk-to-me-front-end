@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter()
   useEffect(() => {
     setTimeout(() => {
-      router.push('/join')
+      router.push('/home')
     }, 3000)
   }, [router])
   return (
