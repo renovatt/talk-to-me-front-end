@@ -16,6 +16,10 @@ export function SocketProvider({ children }: { children: ReactNode }) {
       transports: ['websocket'],
     })
     setSocket(newSocket)
+
+    return () => {
+      newSocket.disconnect()
+    }
   }, [])
 
   return (
