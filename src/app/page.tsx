@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       router.push('/home')
-    }, 3000)
+    }, 300)
   }, [router])
   return (
     <main className="flex min-h-screen flex-col">
