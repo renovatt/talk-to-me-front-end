@@ -2,39 +2,21 @@
 import { Message, MessageMuted } from '@/Icons'
 import { Chat } from '@/app/_components/Chat'
 import GridCam from '@/app/_components/GridCam'
-import { SocketContext } from '@/contexts/socketContext'
-import { useContext, useEffect, useRef, useState } from 'react'
+import { useInitEnhaceCamera } from '@/hooks/useInitEnhaceCamera'
+import { useSocket } from '@/hooks/useSocket'
+import { useEffect, useRef, useState } from 'react'
 
 export default function ScreenRoom({ id }: { id: string }) {
-  const { socket } = useContext(SocketContext)
   const [isOpen, setIsOpen] = useState(true)
   const localStream = useRef<HTMLVideoElement | null>(null)
 
+  const { initEnhancedCamera } = useInitEnhaceCamera(localStream)
+
   useEffect(() => {
-    socket?.on('connect', async () => {
-      console.log('connected')
-      socket?.emit('subscribe', {
-        roomId: id,
-        socketId: socket.id,
-      })
-      await handleInitCamera()
-    })
-  }, [socket, id])
+    initEnhancedCamera()
+  }, [initEnhancedCamera])
 
-  const handleInitCamera = async () => {
-    const video = await navigator.mediaDevices.getUserMedia({
-      video: true,
-      audio: {
-        noiseSuppression: true,
-        echoCancellation: true,
-      },
-    })
-
-    if (localStream.current) {
-      localStream.current.srcObject = video
-    }
-  }
-
+  useSocket(id)
   return (
     <>
       <section className="my-4 flex w-full items-center justify-between px-3">
