@@ -9,7 +9,12 @@ export default function VideoCam({
   return (
     <section className="relative flex h-40 w-full max-w-80 items-center justify-center overflow-hidden rounded bg-950 p-2 md:h-60 md:w-80">
       {localStream.current ? (
-        <video autoPlay playsInline ref={localStream} className="rounded" />
+        <video
+          autoPlay
+          playsInline
+          ref={localStream}
+          className="mirror-mode rounded"
+        />
       ) : (
         <div className="h-32 w-32 rounded-full bg-800 opacity-70 md:h-40 md:w-40" />
       )}

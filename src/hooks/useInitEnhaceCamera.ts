@@ -1,9 +1,12 @@
 import { RefObject } from 'react'
+import { useSetVideo } from './useSetVideo'
 
 export const useInitEnhaceCamera = (
   localStream: RefObject<HTMLVideoElement>,
 ) => {
-  const initEnhancedCamera = async () => {
+  const { setVideoMediaStream } = useSetVideo()
+
+  const initLocalCamera = async () => {
     const video = await navigator.mediaDevices.getUserMedia({
       video: true,
       audio: {
@@ -12,12 +15,15 @@ export const useInitEnhaceCamera = (
       },
     })
 
+    console.log(video)
+    setVideoMediaStream(video)
+
     if (localStream.current) {
       localStream.current.srcObject = video
     }
   }
 
   return {
-    initEnhancedCamera,
+    initLocalCamera,
   }
 }

@@ -25,7 +25,7 @@ export const Chat = ({ roomId }: { roomId: string }) => {
           />
         </div>
 
-        <button type="submit">enviar</button>
+        {/* <button type="submit">enviar</button> */}
       </form>
     </aside>
   )
