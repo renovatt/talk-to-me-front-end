@@ -6,15 +6,19 @@ export const useSocket = (id: string) => {
   const [connected, setConnected] = useState(false)
 
   useEffect(() => {
+    const username = sessionStorage.getItem('@chat-username') as string
+
     socket?.on('connect', async () => {
       console.log('connected')
       socket?.emit('subscribe', {
         roomId: id,
         socketId: socket.id,
+        username,
       })
       setConnected(true)
     })
   }, [socket, id])
+
   return {
     connected,
   }
