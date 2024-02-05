@@ -42,7 +42,7 @@ export default function ScreenRoom({ id }: { id: string }) {
       </section>
 
       <section className="relative flex w-full items-start justify-between gap-4 p-2 px-3 md:h-[70vh]">
-        <video autoPlay playsInline ref={localStream} />
+        <video autoPlay playsInline ref={localStream} className="hidden" />
         <GridCam
           isOpen={isOpen}
           localStream={localStream}
