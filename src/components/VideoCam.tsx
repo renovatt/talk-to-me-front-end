@@ -7,7 +7,7 @@ export default function VideoCam({
 }: {
   localStream: RefObject<HTMLVideoElement>
 }) {
-  const { username } = useGetUsername()
+  const { user } = useGetUsername()
   return (
     <section className="relative flex h-40 w-full max-w-80 items-center justify-center overflow-hidden rounded bg-700/20 p-2 md:h-60 md:w-80">
       {localStream.current ? (
@@ -20,7 +20,9 @@ export default function VideoCam({
       ) : (
         <div className="h-32 w-32 rounded-full bg-800 opacity-70 md:h-40 md:w-40" />
       )}
-      <span className="absolute bottom-2 left-4 capitalize">{username}</span>
+      <span className="absolute bottom-2 left-4 capitalize">
+        {user?.username}
+      </span>
     </section>
   )
 }

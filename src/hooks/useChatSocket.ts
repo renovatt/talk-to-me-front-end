@@ -1,22 +1,23 @@
 import { SocketContext } from '@/contexts/socketContext'
-import { IMessage } from '@/interfaces/message'
+import { IMessage, IUser } from '@/interfaces/message'
 import { useContext, useRef, useState, FormEvent, useEffect } from 'react'
+import { useGetUsername } from './useGetUsername'
 
 export const useChatSocket = (roomId: string) => {
   const { socket } = useContext(SocketContext)
+  const { user } = useGetUsername()
 
   const currentMessage = useRef<HTMLInputElement>(null)
   const [bodyMessage, setBodyMessage] = useState<IMessage[]>([])
 
   const handleSendMessage = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const username = sessionStorage.getItem('@chat-username') as string
 
     if (currentMessage.current && currentMessage.current?.value !== '') {
-      const dataMessage = {
+      const dataMessage: IMessage = {
         roomId,
         message: currentMessage.current.value,
-        username,
+        username: user as IUser,
         time: new Date().toLocaleTimeString(),
       }
 

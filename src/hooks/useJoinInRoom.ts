@@ -1,3 +1,4 @@
+import { saveUserWithColor } from '@/utils/saveUserWithColor'
 import { useRef, FormEvent } from 'react'
 
 export const useJoinInRoom = () => {
@@ -12,7 +13,7 @@ export const useJoinInRoom = () => {
       id.current &&
       id.current.value !== ''
     ) {
-      sessionStorage.setItem('@chat-username', name.current.value)
+      saveUserWithColor(name.current.value)
       const roomId = id.current.value
       window.location.href = `/room/${roomId}`
     }

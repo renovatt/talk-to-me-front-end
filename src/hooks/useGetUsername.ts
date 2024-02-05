@@ -1,13 +1,18 @@
+import { IUser } from '@/interfaces/message'
 import { useEffect, useState } from 'react'
 
 export const useGetUsername = () => {
-  const [username, setUsername] = useState<string>('')
+  const [user, setUser] = useState<IUser | null>(null)
 
   useEffect(() => {
-    const username = sessionStorage.getItem('@chat-username') as string
-    setUsername(username)
+    const userInStorage = sessionStorage.getItem('@chat-username')
+    if (userInStorage) {
+      const parsedUser = JSON.parse(userInStorage) as IUser
+      setUser(parsedUser)
+    }
   }, [])
+
   return {
-    username,
+    user,
   }
 }
