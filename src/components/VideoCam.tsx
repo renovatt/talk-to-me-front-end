@@ -1,11 +1,13 @@
+'use client'
 import { RefObject } from 'react'
+import { useGetUsername } from '@/hooks/useGetUsername'
 
 export default function VideoCam({
   localStream,
 }: {
   localStream: RefObject<HTMLVideoElement>
 }) {
-  const username = sessionStorage.getItem('@chat-username') as string
+  const { username } = useGetUsername()
   return (
     <section className="relative flex h-40 w-full max-w-80 items-center justify-center overflow-hidden rounded bg-700/20 p-2 md:h-60 md:w-80">
       {localStream.current ? (
