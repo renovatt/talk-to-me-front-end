@@ -1,4 +1,4 @@
-import { IMessage } from '@/interface/message'
+import { IMessage } from '@/interfaces/message'
 
 export default function ChatMessage({ message, username, time }: IMessage) {
   return (

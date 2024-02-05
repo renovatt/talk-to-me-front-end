@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 
-export const useSetVideo = () => {
-  const [videoMediaStream, setVideoMediaStream] = useState<MediaStream | null>(
-    null,
-  )
+// export const useSetVideo = () => {
+//   const [videoMediaStream, setVideoMediaStream] = useState<MediaStream | null>(
+//     null,
+//   )
 
-  useEffect(() => {
-    console.log('videoMediaStream updated', videoMediaStream)
-  }, [videoMediaStream])
+//   useEffect(() => {
+//     console.log('videoMediaStream updated', videoMediaStream)
+//   }, [videoMediaStream])
 
-  return {
-    setVideoMediaStream,
-    videoMediaStream,
-  }
-}
+//   return {
+//     setVideoMediaStream,
+//     videoMediaStream,
+//   }
+// }

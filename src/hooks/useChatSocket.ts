@@ -1,5 +1,5 @@
 import { SocketContext } from '@/contexts/socketContext'
-import { IMessage } from '@/interface/message'
+import { IMessage } from '@/interfaces/message'
 import { useContext, useRef, useState, FormEvent, useEffect } from 'react'
 
 export const useChatSocket = (roomId: string) => {
