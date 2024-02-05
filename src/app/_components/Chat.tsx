@@ -1,4 +1,5 @@
 'use client'
+import { Send } from '@/Icons'
 import ChatMessage from '../../components/ChatMessage'
 import { useChatSocket } from '@/hooks/useChatSocket'
 
@@ -14,7 +15,7 @@ export const Chat = ({ roomId }: { roomId: string }) => {
       </section>
 
       <form className="my-2" onSubmit={(e) => handleSendMessage(e)}>
-        <div>
+        <div className="relative flex items-center justify-center">
           <input
             ref={currentMessage}
             className="w-full rounded-lg border-2 border-transparent bg-950 px-3 py-2 outline-none"
@@ -23,9 +24,10 @@ export const Chat = ({ roomId }: { roomId: string }) => {
             id=""
             placeholder="Enviar menssagem"
           />
+          <button className="absolute right-2 cursor-pointer" type="submit">
+            <Send className="opacity-50" />
+          </button>
         </div>
-
-        {/* <button type="submit">enviar</button> */}
       </form>
     </aside>
   )
