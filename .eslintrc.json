@@ -2,5 +2,9 @@
   "extends": [
     "@rocketseat/eslint-config/next", 
     "next/core-web-vitals"
-  ]
+  ], 
+  "rules": {
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
+  }
 }
