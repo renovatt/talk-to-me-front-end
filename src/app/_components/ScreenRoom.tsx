@@ -27,7 +27,11 @@ export default function ScreenRoom({ id }: { id: string }) {
   return (
     <>
       <section className="my-4 flex w-full items-center justify-between px-3">
-        <h1 className="text-base font-bold md:text-2xl">Sala: {id}</h1>
+        <section className="flex items-center justify-center gap-2">
+          <h1 className="pl-5 text-base font-bold md:text-2xl">ID da sala:</h1>
+          <span className="mt-1 text-xs text-700">{id}</span>
+        </section>
+
         {isOpen ? (
           <MessageMuted
             className="hidden h-6 w-6 cursor-pointer md:flex"

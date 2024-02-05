@@ -7,7 +7,7 @@ export default function VideoCam({
 }) {
   const username = sessionStorage.getItem('@chat-username') as string
   return (
-    <section className="relative flex h-40 w-full max-w-80 items-center justify-center overflow-hidden rounded bg-950 p-2 md:h-60 md:w-80">
+    <section className="relative flex h-40 w-full max-w-80 items-center justify-center overflow-hidden rounded bg-700/20 p-2 md:h-60 md:w-80">
       {localStream.current ? (
         <video
           autoPlay
