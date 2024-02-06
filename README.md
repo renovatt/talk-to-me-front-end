@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align='center'>
+  <img src="public/logo.svg" width="150px">
+</div>
 
-## Getting Started
+## 🏋️‍♂️ Sobre o Projeto
 
-First, run the development server:
+### Durante o evento ``Hero-Code``, embarquei em mais uma jornada no desenvolvimento com ``Next.js 14``,`` Socket.io`` e ``WebRTC``, com o objetivo de expandir minha compreensão e habilidades nesses domínios. O resultado desse empenho é um projeto inovador que oferece uma experiência de ``comunicação em tempo real`` excepcional.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Por meio dessa plataforma, os participantes têm à disposição um ``chat integrado`` para interação instantânea. Além disso, a ``integração do WebRTC`` permite que os usuários ``visualizem e transmitam`` suas câmeras em ``tempo real``, proporcionando uma experiência imersiva e colaborativa. Desde o anfitrião da sala até os convidados, todos podem compartilhar sua presença visual, criando um ambiente participativo e dinâmico.
+
+### Complementando essa experiência, a funcionalidade de ``compartilhamento de tela`` possibilita aos participantes exibir conteúdo diretamente de seus computadores, tornando a colaboração mais fluida e eficaz.
+
+<!-- [Ver Projeto](https://t-shirt-store-one.vercel.app/) 🚀 -->
+
+## 🎨 Visual do Projeto
+
+### ***Web Layout***
+
+![Web-1](/public/img/web-1.png) 
+
+## 🛠️ Tecnologias
+
+💻 **Front-end**
+- [Next.js 14.0.1](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [WebRTC](https://webrtc.org/getting-started/peer-connections?hl=pt-br)
+
+📚 **Bibliotecas**
+- [socket.io](https://socket.io/)
+
+🎨 **Estilização**
+- [tailwindcss](https://tailwindcss.com/docs/installation)
+
+🔋 **Versionamento e Deploy**
+- [Git](https://git-scm.com)
+- [Vercel](https://vercel.com/)
+
+## ⚙️ Configurações e Instalação
+
+```sh
+# clonando o projeto
+git clone https://github.com/renovatt/talk-to-me-front-end.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```sh
+# Instalando as dependências
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+# Compilar e abrir o programa para desenvolvimento
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```sh
+# Compilar e minificar para produção
+npm run build
+```
 
-## Learn More
+🚀 **Como contribuir?**
 
-To learn more about Next.js, take a look at the following resources:
+- Siga-me no GitHub para oferecer suporte.
+- Dê uma estrela ao projeto.
+- Conecte-se comigo no LinkedIn para expandir nossa rede e curta o projeto.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+🧑‍💻 **Criado por**
+[@renovatt](https://www.linkedin.com/in/renovatt/)
